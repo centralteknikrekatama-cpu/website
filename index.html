@@ -10,59 +10,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: url('background.png') no-repeat center center;
+  background: url('background.png') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
   color: white;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-align: center;
   padding: 20px;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 52px;
+.hero h1 {
+  font-size: 60px;
   margin-bottom: 20px;
   background: linear-gradient(90deg, #00f2fe, #4facfe, #43e97b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-p {
-  font-size: 20px;
-  margin-bottom: 30px;
+.hero p {
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.9;
 }
 
 .button {
   display: inline-block;
-  padding: 15px 30px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
+  padding: 15px 35px;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
   margin: 10px;
   transition: 0.3s;
+  color: white;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+}
+
+.btn-maps {
+  background: #4285F4;
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .button:hover {
   transform: scale(1.05);
-}
-
-.maps-btn {
-  background: #4285F4;
 }
 
 .footer {
@@ -71,26 +78,40 @@ p {
   font-size: 14px;
   opacity: 0.8;
 }
+
+@media(max-width:768px){
+  .hero h1 {
+    font-size: 40px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <div class="overlay">
-  <h1>Central Teknik Rekatama</h1>
-  <p>Your Trusted Engineering Partner.</p>
 
-  <a href="https://wa.me/6285177823422" class="button" target="_blank">
-    Contact Us
-  </a>
+  <div class="hero">
+    <h1>Central Teknik Rekatama</h1>
+    <p>Your Trusted Engineering Partner</p>
 
-  <a href="https://share.google/SlMYqpMzPHTLqDeDi" class="button maps-btn" target="_blank">
-    Lihat Lokasi di Google Maps
-  </a>
+    <a href="https://wa.me/6285177823422" class="button btn-whatsapp" target="_blank">
+      Contact Us
+    </a>
+
+    <a href="https://share.google/SlMYqpMzPHTLqDeDi" class="button btn-maps" target="_blank">
+      View Location
+    </a>
+
+    <a href="https://www.instagram.com/rekatama_3d_print" class="button btn-instagram" target="_blank">
+      Instagram
+    </a>
+  </div>
 
   <div class="footer">
     © 2026 Central Teknik Rekatama. All Rights Reserved.
   </div>
+
 </div>
 
 </body>
